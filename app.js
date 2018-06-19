@@ -7,18 +7,53 @@ app.set('view engine', 'mustache')
 app.set('views', './views')
 app.use('/public', express.static('public'))
 
+
+// __________HOME PAGE ROUTES_________//
 app.get('/', (req,res) => {
-  res.render('home')
+  res.redirect('/Home')
 })
 
 app.get('/Home', (req,res) => {
   res.render('home')
 })
 
+// __________ABOUT US ROUTES_________//
 app.get('/AboutUs', (req,res) => {
   res.render('aboutus')
 })
+// __________SERVICE PAGE ROUTES_________//
+app.get('/Services', (req,res) => {
+  res.render('services')
+})
 
+app.get('/RoofRepair', (req,res) => {
+  res.render('roofRepair')
+})
+
+app.get('/RoofInstallation', (req,res) => {
+  res.render('RoofInstallation')
+})
+
+app.get('/RoofLeakRepair', (req,res) => {
+  res.render('roofLeakRepair')
+})
+
+app.get('/EmergencyRepair', (req,res) => {
+  res.render('emergency')
+})
+
+app.get('/RoofManagement', (req,res) => {
+  res.render('roofManagement')
+})
+
+app.get('/RoofCoating', (req,res) => {
+  res.render('roofCoating')
+})
+
+// ________Gallery Routes________//
+app.get('/Gallery', (req,res) => {
+  res.render('gallery')
+})
 
 app.listen(3000, () =>{
   console.log('We are live on channel 3000')
