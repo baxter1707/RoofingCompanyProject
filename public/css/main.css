@@ -6596,12 +6596,12 @@ a.logo {
 }
 
 .page_toplogo a.logo img {
-	max-width: 80px;
+	max-width: 100px;
 }
 
 @media (max-width: 1599px) {
 	.page_header a.logo img {
-		max-width: 80px;
+		max-width: 100px;
 	}
 }
 
@@ -6916,12 +6916,11 @@ a.logo.vertical_logo img {
 
 .header_left_logo {
 	white-space: nowrap;
-	padding: 0 15px;
 	overflow: visible;
 }
 
 .header_left_logo .logo img {
-	max-width: 80px;
+	max-width: 100px;
 }
 
 .header_mainmenu {

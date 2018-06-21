@@ -39,7 +39,7 @@ app.get('/RoofLeakRepair', (req,res) => {
 })
 
 app.get('/EmergencyRepair', (req,res) => {
-  res.render('emergency')
+  res.render('emergencyRepair')
 })
 
 app.get('/RoofManagement', (req,res) => {
@@ -53,6 +53,12 @@ app.get('/RoofCoating', (req,res) => {
 // ________Gallery Routes________//
 app.get('/Gallery', (req,res) => {
   res.render('gallery')
+})
+
+
+//_______ContactUs Routes_______//
+app.get('/ContactUs', (req,res) => {
+  res.render('contact')
 })
 
 app.listen(3000, () =>{
