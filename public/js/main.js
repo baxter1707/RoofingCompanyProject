@@ -8,24 +8,24 @@ var $window = jQuery(window);
 //hidding menu elements that do not fit in menu width
 //processing center logo
 function menuHideExtraElements() {
-	
+
 	//cleaneng changed elements
 	jQuery('.sf-more-li, .sf-logo-li').remove();
 	var windowWidth = jQuery('body').innerWidth();
-	
+
 	jQuery('.sf-menu').each(function(){
 		var $thisMenu = jQuery(this);
 		var $menuWraper = $thisMenu.closest('.mainmenu_wrapper');
 		$menuWraper.attr('style', '');
 		if (windowWidth > 991) {
-			//grab all main menu first level items 
+			//grab all main menu first level items
 			var $menuLis = $menuWraper.find('.sf-menu > li');
 			$menuLis.removeClass('sf-md-hidden');
 
 			var $headerLogoCenter = $thisMenu.closest('.header_logo_center');
 			var logoWidth = 0;
 			var summaryLiWidth = 0;
-			
+
 			if ( $headerLogoCenter.length ) {
 				var $logo = $headerLogoCenter.find('.logo');
 				// 30/2 - left and right margins
@@ -68,7 +68,7 @@ function menuHideExtraElements() {
 				var menuLeftOffset = liLeftRightDotX - logoLeftDotX;
 				$menuWraper.css({'left': -menuLeftOffset})
 			}
-			
+
 		}// > 991
 	}); //sf-menu each
 } //menuHideExtraElements
@@ -98,7 +98,7 @@ function initMegaMenu() {
 function affixSidebarInit() {
 	var $affixAside = jQuery('.affix-aside');
 	if ($affixAside.length) {
-		
+
 			//on stick and unstick event
 			$affixAside.on('affix.bs.affix', function(e) {
 				var affixWidth = $affixAside.width() - 1;
@@ -109,11 +109,11 @@ function affixSidebarInit() {
 			}).on('affix-top.bs.affix affix-bottom.bs.affix', function(e) {
 				$affixAside.css({"width": "", "left": ""});
 			});
-			
+
 			//counting offset
 			var offsetTop = $affixAside.offset().top - jQuery('.page_header').height();
 			var offsetBottom = jQuery('.page_footer').outerHeight(true) + jQuery('.page_copyright').outerHeight(true);
-			
+
 			$affixAside.affix({
 				offset: {
 					top: offsetTop,
@@ -123,23 +123,23 @@ function affixSidebarInit() {
 
 			jQuery(window).on('resize', function() {
 				$affixAside.css({"width": "", "left": ""});
-				
+
 				if( $affixAside.hasClass('affix')) {
 					//returning sidebar in top position if it is sticked because of unexpacted behavior
 					$affixAside.removeClass("affix").css("left", "").addClass("affix-top");
 				}
 
-				var offsetTop = jQuery('.page_topline').outerHeight(true) 
-								+ jQuery('.page_toplogo').outerHeight(true) 
+				var offsetTop = jQuery('.page_topline').outerHeight(true)
+								+ jQuery('.page_toplogo').outerHeight(true)
 								+ jQuery('.page_header').outerHeight(true)
-								+ jQuery('.page_breadcrumbs').outerHeight(true) 
+								+ jQuery('.page_breadcrumbs').outerHeight(true)
 								+ jQuery('.blog_slider').outerHeight(true);
-				var offsetBottom = jQuery('.page_footer').outerHeight(true) 
+				var offsetBottom = jQuery('.page_footer').outerHeight(true)
 								+ jQuery('.page_copyright').outerHeight(true);
-				
+
 				$affixAside.data('bs.affix').options.offset.top = offsetTop;
 				$affixAside.data('bs.affix').options.offset.bottom = offsetBottom;
-				
+
 				$affixAside.affix('checkPosition');
 
 			});
@@ -226,7 +226,7 @@ function windowLoadInit() {
 		});
 	}
 
-	
+
 	//toggle mobile menu
 	jQuery('.toggle_menu').on('click', function(){
 		jQuery(this)
@@ -312,7 +312,7 @@ function windowLoadInit() {
 	// jQuery('.mainmenu').on('mouseover', 'ul li', function(){
 		if(MainWindowWidth > 991) {
 			var $this = jQuery(this);
-			// checks if third level menu exist         
+			// checks if third level menu exist
 			var subMenuExist = $this.find('ul').length;
 			if( subMenuExist > 0){
 				var subMenuWidth = $this.find('ul, div').first().width();
@@ -344,11 +344,11 @@ function windowLoadInit() {
 					$this.find('ul').first().css({
 						left: newSubMenuPosition,
 					});
-				} 
+				}
 			}
 		}
 	});
-	
+
 	/////////////////////////////////////////
 	//single page localscroll and scrollspy//
 	/////////////////////////////////////////
@@ -362,7 +362,7 @@ function windowLoadInit() {
 	} else if (jQuery('.mainmenu_wrapper').length) {
 		$body.scrollspy({
 			target: '.mainmenu_wrapper',
-			offset: navHeight 
+			offset: navHeight
 		})
 	}
 	if (jQuery().localScroll) {
@@ -403,7 +403,7 @@ function windowLoadInit() {
 	if (jQuery().parallax) {
 		jQuery('.parallax').parallax("50%", 0.01);
 	}
-	
+
 	//prettyPhoto
 	if (jQuery().prettyPhoto) {
 		jQuery("a[data-gal^='prettyPhoto']").prettyPhoto({
@@ -412,7 +412,7 @@ function windowLoadInit() {
 			social_tools: false
 		});
 	}
-	
+
 	////////////////////////////////////////
 	//init Bootstrap JS components//
 	////////////////////////////////////////
@@ -420,14 +420,14 @@ function windowLoadInit() {
 	if (jQuery().carousel) {
 		jQuery('.carousel').carousel();
 	}
-	//bootstrap tab - show first tab 
+	//bootstrap tab - show first tab
 	jQuery('.nav-tabs').each(function() {
 		jQuery(this).find('a').first().tab('show');
 	});
 	jQuery('.tab-content').each(function() {
 		jQuery(this).find('.tab-pane').first().addClass('fade in');
 	});
-	//bootstrap collapse - show first tab 
+	//bootstrap collapse - show first tab
 	jQuery('.panel-group').each(function() {
 		jQuery(this).find('a').first().filter('.collapsed').trigger('click');
 	});
@@ -436,7 +436,7 @@ function windowLoadInit() {
 		jQuery('[data-toggle="tooltip"]').tooltip();
 	}
 
-	
+
 
 	//comingsoon counter
 	if (jQuery().countdown) {
@@ -475,7 +475,7 @@ function windowLoadInit() {
 
 		//sending form data to PHP server if fields are not empty
 		var request = $form.serialize();
-		var ajax = jQuery.post( "contact-form.php", request )
+		var ajax = jQuery.post( "/ContactForm", request )
 		.done(function( data ) {
 			jQuery($form).find('[type="submit"]').attr('disabled', false).parent().append('<span class="contact-form-respond highlight">'+data+'</span>');
 			//cleaning form
@@ -497,7 +497,7 @@ function windowLoadInit() {
 	});
 	//search form processing
 	jQuery('form.searchform').on('submit', function( e ){
-		
+
 		e.preventDefault();
 		var $form = jQuery(this);
 		var $searchModal = jQuery('#search_modal');
@@ -528,7 +528,7 @@ function windowLoadInit() {
 		})
 		.fail(function( data ) {
 			$searchModal.append('<div class="searchform-respond">Search cannot be done. You need PHP server to search.</div>');
-			
+
 		})
 	});
 
@@ -547,7 +547,7 @@ function windowLoadInit() {
 			}
 		});
 	});
-	
+
 	//twitter
 	if (jQuery().tweet) {
 		jQuery('.twitter').tweet({
@@ -556,7 +556,7 @@ function windowLoadInit() {
 			avatar_size: 48,
 			loading_text: 'loading twitter feed...',
 			join_text: 'auto',
-			username: 'michaeljackson', 
+			username: 'michaeljackson',
 			template: "<span class=\"darklinks\">{user}</span><span class=\"tweet_text\">{tweet_text}</span><span class=\"highlightlinks\">{time}</span>"
 		});
 	}
@@ -605,13 +605,13 @@ function windowLoadInit() {
 	if (jQuery().elevateZoom) {
 		jQuery('#product-image').elevateZoom({
 			gallery: 'product-image-gallery',
-			cursor: 'pointer', 
-			galleryActiveClass: 'active', 
-			responsive:true, 
+			cursor: 'pointer',
+			galleryActiveClass: 'active',
+			responsive:true,
 			loadingIcon: 'img/AjaxLoader.gif'
 		});
 	}
-	
+
 	//add review button
 	jQuery('.review-link').on('click', function( e ) {
 		var $thisLink = jQuery(this);
@@ -640,7 +640,7 @@ function windowLoadInit() {
 			numberField.val(parseFloat(currentVal) + 1);
 		}
 	});
-	
+
 	//remove product from cart
 	jQuery('a.remove').on('click', function( e ) {
 		e.preventDefault();
@@ -674,7 +674,7 @@ function windowLoadInit() {
 		}
 	}
 
-	//color filter 
+	//color filter
 	jQuery(".color-filters").find("a[data-background-color]").each(function() {
 		jQuery(this).css({"background-color" : jQuery(this).data("background-color")});
 	}); // end of SHOP
@@ -693,9 +693,9 @@ function windowLoadInit() {
 
 			$currentSlider.flexslider({
 				animation: "fade",
-				pauseOnHover: true, 
+				pauseOnHover: true,
 				useCSS: true,
-				controlNav: dots,   
+				controlNav: dots,
 				directionNav: nav,
 				prevText: "",
 				nextText: "",
@@ -741,14 +741,14 @@ function windowLoadInit() {
 
 		jQuery(".flexslider").each(function(index){
 			var $currentSlider = jQuery(this);
-			//exit if intro slider already activated 
+			//exit if intro slider already activated
 			if ($currentSlider.find('.flex-active-slide').length) {
 				return;
 			}
 			$currentSlider.flexslider({
 				animation: "fade",
 				useCSS: true,
-				controlNav: true,   
+				controlNav: true,
 				directionNav: false,
 				prevText: "",
 				nextText: "",
@@ -776,7 +776,7 @@ function windowLoadInit() {
 		$header.wrap('<div class="page_header_wrapper"></div>');
 		var $headerWrapper = $header.parent();
 		if (!boxed) {
-			$headerWrapper.css({height: headerHeight}); 
+			$headerWrapper.css({height: headerHeight});
 		}
 
 		//headerWrapper background
@@ -866,7 +866,7 @@ function windowLoadInit() {
 					var filterValue = $thisA.attr('data-filter');
 					$thisA.siblings().removeClass('selected active');
 					$thisA.addClass('selected active');
-					
+
 					//removing old items
 					$carousel.find('.owl-item').length;
 					for (var i = $carousel.find('.owl-item').length - 1; i >= 0; i--) {
@@ -877,9 +877,9 @@ function windowLoadInit() {
 					var $filteredItems = jQuery($carousel.next().find(' > ' +filterValue).clone());
 					$filteredItems.each(function() {
 						$carousel.trigger('add.owl.carousel', jQuery(this));
-						jQuery(this).addClass('scaleAppear');						
+						jQuery(this).addClass('scaleAppear');
 					});
-					
+
 					$carousel.trigger('refresh.owl.carousel');
 
 					//reinit prettyPhoto in filtered OWL carousel
@@ -890,7 +890,7 @@ function windowLoadInit() {
 						});
 					}
 				});
-				
+
 			} //filters
 
 			$carousel.owlCarousel({
@@ -983,7 +983,7 @@ function windowLoadInit() {
 		//counters init on scroll
 		if (jQuery().countTo) {
 			jQuery('.counter').appear();
-			
+
 			jQuery('.counter').filter(':appeared').each(function(){
 				initCounter(jQuery(this));
 			});
@@ -993,7 +993,7 @@ function windowLoadInit() {
 				});
 			});
 		}
-	
+
 		//bootstrap animated progressbar
 		if (jQuery().progressbar) {
 			jQuery('.progress .progress-bar').appear();
@@ -1020,7 +1020,7 @@ function windowLoadInit() {
 		if (jQuery().easyPieChart) {
 
 			jQuery('.chart').appear();
-			
+
 			jQuery('.chart').filter(':appeared').each(function(){
 				initChart(jQuery(this));
 			});
@@ -1170,7 +1170,7 @@ $window.on('load', function(){
 
 			//map styles. You can grab different styles on https://snazzymaps.com/
 			var styles = [{"featureType": "administrative","elementType": "all","stylers": [{"saturation": "-100"}]},{"featureType": "administrative.province","elementType": "all","stylers": [{"visibility": "off"}]},{"featureType": "landscape","elementType": "all","stylers": [{"saturation": -100},{"lightness": 65},{"visibility": "on"}]},{"featureType": "poi","elementType": "all","stylers": [{"saturation": -100},{"lightness": "50"},{"visibility": "simplified"}]},{"featureType": "road","elementType": "all","stylers": [{"saturation": "-100"}]},{"featureType": "road.highway","elementType": "all","stylers": [{"visibility": "simplified"}]},{"featureType": "road.arterial","elementType": "all","stylers": [{"lightness": "30"}]},{"featureType": "road.local","elementType": "all","stylers": [{"lightness": "40"}]},{"featureType": "transit","elementType": "all","stylers": [{"saturation": -100},{"visibility": "simplified"}]},{"featureType": "water","elementType": "geometry","stylers": [{"hue": "#ffff00"},{"lightness": -25},{"saturation": -97}]},{"featureType": "water","elementType": "labels","stylers": [{"lightness": -25},{"saturation": -100}]}];
-			
+
 			//map settings
 			var address = $map.data('address') ? $map.data('address') : 'london, baker street, 221b';
 			var markerDescription = $map.find('.map_marker_description').prop('outerHTML');
@@ -1181,12 +1181,12 @@ $window.on('load', function(){
 
 			//type your address after "address="
 			jQuery.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=' + address, function(data) {
-				
+
 				lat = data.results[0].geometry.location.lat;
 				lng = data.results[0].geometry.location.lng;
 
 			}).complete(function(){
-				
+
 				var center = new google.maps.LatLng(lat, lng);
 				var settings = {
 					mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -1194,7 +1194,7 @@ $window.on('load', function(){
 					draggable: true,
 					scrollwheel: false,
 					center: center,
-					styles: styles 
+					styles: styles
 				};
 				map = new google.maps.Map($map[0], settings);
 
@@ -1205,10 +1205,10 @@ $window.on('load', function(){
 					icon: markerIconSrc,
 				});
 
-				var infowindow = new google.maps.InfoWindow({ 
+				var infowindow = new google.maps.InfoWindow({
 					content: markerDescription
 				});
-				
+
 				google.maps.event.addListener(marker, 'click', function() {
 					infowindow.open(map,marker);
 				});
@@ -1240,7 +1240,7 @@ $window.on('resize', function(){
 	if (!$header.closest('.boxed').length) {
 		jQuery(".page_header_wrapper").css({height: $header.first().outerHeight()}); //editing header wrapper height for smooth stick and unstick
 	}
-	
+
 });
 //end of IIFE function
 })();
