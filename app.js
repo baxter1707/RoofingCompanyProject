@@ -1,17 +1,17 @@
-const mustacheExpress = require('mustache-express')
-const express = require('express')
+const mustacheExpress = require('mustache-express');
+const express = require('express');
 const nodemailer = require('nodemailer');
-const app = express()
+const app = express();
 const bodyParser = require('body-parser');
 
-app.engine('mustache', mustacheExpress())
-app.set('view engine', 'mustache')
-app.set('views', './views')
-app.use('/public', express.static('public'))
-app.use(bodyParser.urlencoded({extended: true}));
+app.engine('mustache', mustacheExpress());
+app.set('view engine', 'mustache');
+app.set('views', './views');
+app.use('/public', express.static('public'));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
-// __________HOME PAGE ROUTES_________//
+// __HOME PAGE ROUTES__//
 app.get('/', (req,res) => {
   res.redirect('/Home')
 })
@@ -29,8 +29,8 @@ app.get('/Services', (req,res) => {
   res.render('services')
 })
 
-app.get('/RoofRepair', (req,res) => {
-  res.render('roofRepair')
+app.get('/InsuranceSpecialist', (req,res) => {
+  res.render('insuranceSpecialist')
 })
 
 app.get('/RoofInstallation', (req,res) => {
@@ -41,16 +41,8 @@ app.get('/RoofLeakRepair', (req,res) => {
   res.render('roofLeakRepair')
 })
 
-app.get('/EmergencyRepair', (req,res) => {
-  res.render('emergencyRepair')
-})
-
-app.get('/RoofManagement', (req,res) => {
-  res.render('roofManagement')
-})
-
-app.get('/RoofCoating', (req,res) => {
-  res.render('roofCoating')
+app.get('/StormDamage', (req,res) => {
+  res.render('stormDamage')
 })
 
 // ________Gallery Routes________//
