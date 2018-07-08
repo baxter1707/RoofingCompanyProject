@@ -50,6 +50,11 @@ app.get('/Gallery', (req,res) => {
   res.render('gallery')
 })
 
+//________FAQ ROUTES________//
+app.get('/FAQ', (req,res)=>{
+  res.render('faq')
+})
+
 
 //_______ContactUs Routes_______//
 app.get('/ContactUs', (req,res) => {
