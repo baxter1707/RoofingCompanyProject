@@ -77,7 +77,17 @@ app.post('/ContactForm', function (req, res) {
     from: req.body.name + ' &lt;' + req.body.email + '&gt;',
     to: 'michaelbaxter1707@gmail.com',
     subject: req.body.subject,
-    text: `${req.body.name} (${req.body.email}) (${req.body.phone}) says: ${req.body.message}`
+    text:
+    `
+    fullname: ${req.body.name}
+    email:(${req.body.email})
+    phone number: (${req.body.phone})
+    address:(${req.body.address})
+    leaks: (${req.body.leaks})
+    completion date:(${req.body.date})
+    insurenace claim: (${req.body.insurance})
+    says: ${req.body.message}
+    `
   };
   smtpTrans.sendMail(mailOpts, function (error, response) {
     if (error) {

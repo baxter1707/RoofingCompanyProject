@@ -367,22 +367,22 @@
 				</p>
 
 							<div class="row columns_margin_top_20">
-								<div class="col-sm-4">
+								<div class="col-sm-6 col-sm-12">
 									<div class="teaser hover-bg-teaser vertical-item light_bg_color text-center">
 										<div class="item-content">
 											<i class="ecoroof-wrench size_normal highlight"></i>
 											<h5 class="text-uppercase grey bottommargin_0">
-												Roof
+												Insurance
 												<br>
-												<span class="regular">Repairing</span>
+												<span class="regular">Specialist</span>
 											</h5>
 										</div>
 										<div class="media-links no-color-overlay">
-											<a href="/RoofRepair" class="abs-link"></a>
+											<a href="/InsuranceSpecialist " class="abs-link"></a>
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-4">
+								<div class="col-sm-6 col-sm-12">
 									<div class="teaser hover-bg-teaser vertical-item light_bg_color text-center">
 										<div class="item-content">
 											<i class="ecoroof-hummer size_normal highlight"></i>
@@ -397,7 +397,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-4">
+								<div class="col-sm-6 col-sm-12">
 									<div class="teaser hover-bg-teaser vertical-item light_bg_color text-center">
 										<div class="item-content">
 											<i class="ecoroof-tube size_normal highlight"></i>
@@ -412,22 +412,22 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-4">
+								<div class="col-sm-6 col-sm-12">
 									<div class="teaser hover-bg-teaser vertical-item light_bg_color text-center">
 										<div class="item-content">
 											<i class="ecoroof-cutters size_normal highlight"></i>
 											<h5 class="text-uppercase grey bottommargin_0">
-												Emergency
+												Storm
 												<br>
-												<span class="regular">Repair</span>
+												<span class="regular">Damage</span>
 											</h5>
 										</div>
 										<div class="media-links no-color-overlay">
-											<a href="/EmergencyRepair" class="abs-link"></a>
+											<a href="/StormDamage" class="abs-link"></a>
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-4">
+								<!-- <div class="col-sm-4">
 									<div class="teaser hover-bg-teaser vertical-item light_bg_color text-center">
 										<div class="item-content">
 											<i class="ecoroof-helmet size_normal highlight"></i>
@@ -441,8 +441,8 @@
 											<a href="/RoofManagement" class="abs-link"></a>
 										</div>
 									</div>
-								</div>
-								<div class="col-sm-4">
+								</div> -->
+								<!-- <div class="col-sm-4">
 									<div class="teaser hover-bg-teaser vertical-item light_bg_color text-center">
 										<div class="item-content">
 											<i class="ecoroof-roof size_normal highlight"></i>
@@ -456,7 +456,7 @@
 											<a href="/RoofCoating" class="abs-link"></a>
 										</div>
 									</div>
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</div>
@@ -618,6 +618,14 @@
 								</div>
 								<div class="col-sm-6">
 									<div class="form-group">
+										<label for="address">Home Address
+											<span class="required">*</span>
+										</label>
+										<input type="text" aria-required="true" size="30" value="" name="address" id="address" class="form-control text-center" placeholder="Street Address">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
 										<label for="phone">Phone Number
 											<span class="required">*</span>
 										</label>
@@ -630,6 +638,38 @@
 											<span class="required">*</span>
 										</label>
 										<input type="text" aria-required="true" size="30" value="" name="subject" id="subject" class="form-control text-center" placeholder="Message Topic">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="leaks">Leaks
+											<span class="required">*</span>
+										</label>
+										<input type="text" list='leak-options' aria-required="true" size="30" value="" name="leaks" id="name" class="form-control text-center" placeholder="Are you aware of any leaks?">
+											<datalist id="leak-options">
+    										<option value="Yes"/>
+    										<option value="No"/>
+											</datalist>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="date">Completion Date
+											<span class="required">*</span>
+										</label>
+										<input onfocus="(this.type='date')" aria-required="true" size="30" value="" name="date" id="date" class="form-control text-center" placeholder="Estimated Completion Date">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="insurance">Insurance Claim
+											<span class="required">*</span>
+										</label>
+										<input type="text" list='insurance-options' aria-required="true" size="30" value="" name="insurance" id="insurance" class="form-control text-center" placeholder="Have you filed an Insurance Claim?">
+											<datalist id="insurance-options">
+    										<option value="Yes"/>
+    										<option value="No"/>
+											</datalist>
 									</div>
 								</div>
 								<div class="col-sm-12">
