@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+	<title>Serenity Roofing and Construction</title>
+	<meta charset="utf-8">
+	<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../public/css/animations.css">
+	<link rel="stylesheet" href="../public/css/fonts.css">
+	<link rel="stylesheet" href="../public/css/main.css" class="color-switcher-link">
+	<script src="../public/js/vendor/modernizr-2.6.2.min.js"></script>
+
+	<!--[if lt IE 9]>
+		<script src="js/vendor/html5shiv.min.js"></script>
+		<script src="js/vendor/respond.min.js"></script>
+		<script src="js/vendor/jquery-1.12.4.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+	<!--[if lt IE 9]>
+		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
+	<![endif]-->
+
+	<div class="preloader">
+		<div class="preloader_image"></div>
+	</div>
+
+	<!-- search modal -->
+	<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">
+				<i class="rt-icon2-cross2"></i>
+			</span>
+		</button>
+		<div class="widget widget_search">
+			<form method="get" class="searchform search-form form-inline" action="./">
+				<div class="form-group">
+					<input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
+				</div>
+				<button type="submit" class="theme_button">Search</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Unyson messages modal -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+		<div class="fw-messages-wrap ls with_padding">
+			<!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
+			<!--
+		<ul class="list-unstyled">
+			<li>Message To User</li>
+		</ul>
+		-->
+
+		</div>
+	</div>
+	<!-- eof .modal -->
+
+	<!-- wrappers for visual page editor and boxed version of template -->
+	<div id="canvas">
+		<div id="box_wrapper">
+
+			<!-- template sections -->
+
+
+
+			<section class="page_breadcrumbs ds parallax section_padding_top_50 section_padding_bottom_50">
+				<div style="background-color:white; width:100%"  class="container">
+					<div class="row">
+						<div class="col-sm-12 text-center">
+
+                <img style="width: 30%" style="height:30%"src="../public/images/SR_logo-white_background.png" alt="">
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section id="comingsoon1" class="ls section_padding_top_100 section_padding_bottom_100">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 text-center">
+							<h2 class="section_header big">
+								Coming Soon!
+							</h2>
+							<p class="underheading">Stay Tuned!</p>
+
+							<div id="comingsoon-countdown"></div>
+
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 col-md-push-4 col-sm-6 col-sm-push-3 text-center">
+
+							<div class="widget widget_mailchimp">
+
+								<p>Subscribe to our latest news to be updated, we promise not to spam!</p>
+
+								<form class="signup" action="./" method="get">
+									<div class="form-group">
+										<input name="email" type="email" class="mailchimp_email form-control" placeholder="Email Address">
+									</div>
+									<button type="submit" class="theme_button color1 no_bg_button">Send</button>
+									<div class="response"></div>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<footer class="page_footer ds section_padding_top_100 section_padding_bottom_100 columns_padding_25 table_section table_section_md">
+				<div class="container">
+          <section class="ls section_padding_top_100 section_padding_bottom_100 page_contact">
+    				<div class="container">
+    					<div class="row">
+    						<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 text-center">
+
+    							<h5 class="regular text-uppercase">Write us now</h5>
+    							<h2 class="section_header">Contact Form</h2>
+
+    							<form action="/ContactForm" class="contact-form row columns_padding_10 topmargin_50" method="POST" >
+
+    								<div class="col-sm-6">
+    									<div class="form-group">
+    										<label for="name">Full Name
+    											<span class="required">*</span>
+    										</label>
+    										<input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control text-center" placeholder="Full Name">
+    									</div>
+    								</div>
+    								<div class="col-sm-6">
+    									<div class="form-group">
+    										<label for="email">Email address
+    											<span class="required">*</span>
+    										</label>
+    										<input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control text-center" placeholder="Email Address">
+    									</div>
+    								</div>
+    								<div class="col-sm-6">
+    									<div class="form-group">
+    										<label for="address">Home Address
+    											<span class="required">*</span>
+    										</label>
+    										<input type="text" aria-required="true" size="30" value="" name="address" id="address" class="form-control text-center" placeholder="Street Address">
+    									</div>
+    								</div>
+    								<div class="col-sm-6">
+    									<div class="form-group">
+    										<label for="phone">Phone Number
+    											<span class="required">*</span>
+    										</label>
+    										<input type="text" aria-required="true" size="30" value="" name="phone" id="phone" class="form-control text-center" placeholder="Phone Number">
+    									</div>
+    								</div>
+    								<div class="col-sm-6">
+    									<div class="form-group">
+    										<label for="subject">Message Topic
+    											<span class="required">*</span>
+    										</label>
+    										<input type="text" aria-required="true" size="30" value="" name="subject" id="subject" class="form-control text-center" placeholder="Message Topic">
+    									</div>
+    								</div>
+    								<div class="col-sm-6">
+    									<div class="form-group">
+    										<label for="leaks">Leaks
+    											<span class="required">*</span>
+    										</label>
+    										<input type="text" list='leak-options' aria-required="true" size="30" value="" name="leaks" id="name" class="form-control text-center" placeholder="Are you aware of any leaks?">
+    											<datalist id="leak-options">
+        										<option value="Yes"/>
+        										<option value="No"/>
+    											</datalist>
+    									</div>
+    								</div>
+    								<div class="col-sm-6">
+    									<div class="form-group">
+    										<label for="date">Completion Date
+    											<span class="required">*</span>
+    										</label>
+    										<input onfocus="(this.type='date')" aria-required="true" size="30" value="" name="date" id="date" class="form-control text-center" placeholder="Estimated Completion Date">
+    									</div>
+    								</div>
+    								<div class="col-sm-6">
+    									<div class="form-group">
+    										<label for="insurance">Insurance Claim
+    											<span class="required">*</span>
+    										</label>
+    										<input type="text" list='insurance-options' aria-required="true" size="30" value="" name="insurance" id="insurance" class="form-control text-center" placeholder="Have you filed an Insurance Claim?">
+    											<datalist id="insurance-options">
+        										<option value="Yes"/>
+        										<option value="No"/>
+    											</datalist>
+    									</div>
+    								</div>
+    								<div class="col-sm-12">
+
+    									<div class="form-group">
+    										<label for="message">Message</label>
+    										<textarea aria-required="true" rows="5" cols="45" name="message" id="message" class="form-control text-center" placeholder="Message"></textarea>
+    									</div>
+    								</div>
+
+    								<div class="col-sm-12 bottommargin_0">
+
+    									<div class="contact-form-submit topmargin_30">
+    										<button type="submit" id="contact_form_submit" name="contact_submit" class="theme_button color1 margin_0">Send Message</button>
+    									</div>
+    								</div>
+
+    							</form>
+
+    						</div>
+    					</div>
+    				</div>
+    			</section>
+
+		</div>
+		<!-- eof #box_wrapper -->
+	</div>
+	<!-- eof #canvas -->
+
+  <script src="../public/js/compressed.js"></script>
+	<script src="../public/js/main.js"></script>
+
+
+</body>
+
+</html>

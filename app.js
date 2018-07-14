@@ -55,6 +55,11 @@ app.get('/FAQ', (req,res)=>{
   res.render('faq')
 })
 
+//________Coming Soon______??
+app.get('/ComingSoon', (req,res)=> {
+  res.render('comingsoon')
+})
+
 
 //_______ContactUs Routes_______//
 app.get('/ContactUs', (req,res) => {
