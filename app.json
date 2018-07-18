@@ -1,0 +1,7 @@
+{
+  "name":"Serenity Roofing",
+  "description":"Custom made roofing website",
+  "repository": "https://github.com/baxter1707/RoofingCompanyProject.git",
+  "keywords": ["node", "express"],
+  "image": "heroku/nodejs"
+}
