@@ -36,7 +36,7 @@ app.get('/InsuranceSpecialist', (req,res) => {
 })
 
 app.get('/RoofInstallation', (req,res) => {
-  res.render('roofinstallation')
+  res.render('roofInstallation')
 })
 
 app.get('/FamilyOwned', (req,res) => {
