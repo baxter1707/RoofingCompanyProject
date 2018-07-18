@@ -36,7 +36,7 @@ app.get('/InsuranceSpecialist', (req,res) => {
 })
 
 app.get('/RoofInstallation', (req,res) => {
-  res.render('RoofInstallation')
+  res.render('roofinstallation')
 })
 
 app.get('/FamilyOwned', (req,res) => {
@@ -60,6 +60,15 @@ app.get('/FAQ', (req,res)=>{
 //________Coming Soon______??
 app.get('/ComingSoon', (req,res)=> {
   res.render('comingsoon')
+})
+
+//______Commercial Roofing______//
+app.get('/CommercialRoofing', (req, res)=>{
+  res.render('commercialRoofing')
+})
+
+app.get('/ResidentialRoofing', (req, res) =>{
+  res.render('residentialRoofing')
 })
 
 

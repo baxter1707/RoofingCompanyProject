@@ -6601,7 +6601,7 @@ a.logo {
 
 @media (max-width: 1599px) {
 	.page_header a.logo img {
-		max-width: 100px;
+		max-width: 200px;
 	}
 }
 
@@ -6920,7 +6920,7 @@ a.logo.vertical_logo img {
 }
 
 .header_left_logo .logo img {
-	max-width: 100px;
+	max-width: 200px;
 }
 
 .header_mainmenu {
