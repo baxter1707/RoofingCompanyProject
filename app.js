@@ -72,6 +72,12 @@ app.get('/ResidentialRoofing', (req, res) =>{
 })
 
 
+app.get('/ShingleSelector', (req, res) =>{
+  res.render('shingleSelector')
+})
+
+
+
 //_______ContactUs Routes_______//
 app.get('/ContactUs', (req,res) => {
   res.render('contact')

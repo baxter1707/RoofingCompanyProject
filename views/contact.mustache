@@ -83,7 +83,7 @@
 						<div class="col-sm-12 display_table">
 							<div class="header_left_logo display_table_cell">
 								<a href="./" class="logo top_logo text-left">
-									<img src="../public/images/SR_logo-white_background.png" alt="">
+									<img src="../public/images/toplogo.jpg" alt="">
 								</a>
 							</div>
 
@@ -91,7 +91,7 @@
 								<!-- main nav start -->
 								<nav class="mainmenu_wrapper">
 									<ul class="mainmenu nav sf-menu">
-										<li class="active">
+										<li >
 											<a href="/Home">Home</a>
 										</li>
 
@@ -106,7 +106,9 @@
 											<!-- eof mega menu -->
 										</li>
 										<!-- eof features -->
-
+										<li>
+											<a href="/ShingleSelector">Shingle Selector</a>
+										</li>
 
 										<!-- gallery -->
 										<li>
@@ -115,7 +117,7 @@
 										<!-- eof Gallery -->
 
 										<!-- contacts -->
-										<li>
+										<li class="active">
 											<a href="/ContactUs">Free Inspection</a>
 										</li>
 										<!-- eof contacts -->
@@ -219,7 +221,12 @@
 											<span class="required">*</span>
 										</label>
 										<!-- <i class="fa fa-flag highlight" aria-hidden="true"></i> -->
-										<input type="text" aria-required="true" size="30" value="" name="subject" id="subject" class="form-control" placeholder="Subject">
+										<input type="text" list="roof-options" aria-required="true" size="30" value="" name="subject" id="subject" class="form-control" placeholder="Roof Type">
+										<datalist id="roof-options">
+											<option value="Shingle"/>
+											<option value="Metal"/>
+											<option value="Tile"/>
+										</datalist>
 									</div>
 								</div>
 								<div class="col-sm-6">
@@ -239,7 +246,7 @@
 										<label for="date">Completion Date
 											<span class="required">*</span>
 										</label>
-										<input onfocus="(this.type='date')" aria-required="true" size="30" value="" name="date" id="date" class="form-control " placeholder="Estimated Completion Date">
+										<input onfocus="(this.type='date')" aria-required="true" size="30" value="" name="date" id="date" class="form-control " placeholder="Preferred Completion Date">
 									</div>
 								</div>
 								<div class="col-sm-6">
@@ -297,21 +304,21 @@
 										</div>
 										<div class="media-body">
 											<h5 class="media-heading grey">Phone:</h5>
-											8(800) 123-12345
+											713-283-8143
 										</div>
 									</div>
 								</li>
-								<li>
-									<div class="media">
+								<!-- <li> -->
+									<!-- <div class="media">
 										<div class="media-left">
 											<i class="rt-icon2-stack4 highlight fontsize_18"></i>
-										</div>
-										<div class="media-body">
+										</div> -->
+										<!-- <div class="media-body">
 											<h5 class="media-heading grey">Fax:</h5>
 											8(800) 123-12345
-										</div>
-									</div>
-								</li>
+										</div> -->
+									<!-- </div> -->
+								<!-- </li> -->
 								<li>
 									<div class="media">
 										<div class="media-left">
@@ -319,7 +326,7 @@
 										</div>
 										<div class="media-body greylinks">
 											<h5 class="media-heading grey">Email:</h5>
-											<a href="mailto:your@mail.com">ecoroof@info.com</a>
+											<a href="mailto:support@myserenityroofing.com">support@myserenityroofing.com</a>
 										</div>
 									</div>
 								</li>

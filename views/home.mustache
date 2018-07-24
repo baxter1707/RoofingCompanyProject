@@ -80,8 +80,7 @@
 					<div class="row">
 						<div class="col-sm-6 text-center text-sm-left">
 							<p>
-					<i class="fa fa-clock-o grey rightpadding_5" aria-hidden="true"></i>
-					Opening Hours: Weekdays 10:00AM-6:00PM
+					<div aria-hidden="true"></div>
 				</p>
 						</div>
 						<div class="col-sm-6 text-center text-sm-right">
@@ -104,7 +103,7 @@
 						<div class="col-sm-12 display_table">
 							<div class="header_left_logo display_table_cell">
 								<a href="./" class="logo top_logo text-left">
-									<img src="../public/images/SR_logo-white_background.png" alt="">
+									<img src="../public/images/toplogo.jpg" alt="">
 								</a>
 							</div>
 
@@ -127,6 +126,10 @@
 											<!-- eof mega menu -->
 										</li>
 										<!-- eof features -->
+
+										<li>
+											<a href="/ShingleSelector">Shingle Selector</a>
+										</li>
 
 
 										<!-- gallery -->
@@ -187,7 +190,7 @@
 													<p>
 											We have more than 17 years of experience providing quality roofing solutions for businesses and homeowners in the Houston area.
 										</p>
-													<a href="/RoofInstallation" class="theme_button color1">Learn More</a>
+													<a href="/ContactUs" class="theme_button color1">Learn More</a>
 												</div>
 											</div>
 											<!-- eof .slide_description -->
@@ -487,7 +490,7 @@
 											Expert Installation Crews
 										</h5>
 										<p>
-								Our crews have been trained to meet or exceed manufacture installation guidelines and up to date building codes.
+								Our crews have been trained to meet or exceed manufacturer installation guidelines and current building codes.
 							</p>
 									</div>
 									<div class="media-right media-middle">
@@ -581,8 +584,7 @@
 									Email us
 								</h3>
 								<p>
-						serenityroofer@support.com<br>
-						serenityroofer@info.com
+						support@myserenityroofing.com
 					</p>
 							</div>
 						</div>
@@ -637,7 +639,12 @@
 										<label for="subject">Message Topic
 											<span class="required">*</span>
 										</label>
-										<input type="text" aria-required="true" size="30" value="" name="subject" id="subject" class="form-control text-center" placeholder="Message Topic">
+										<input type="text" list='roof-options'aria-required="true" size="30" value="" name="subject" id="subject" class="form-control text-center" placeholder="Roof Type">
+										<datalist id="roof-options">
+											<option value="Shingle"/>
+											<option value="Metal"/>
+											<option value="Tile"/>
+										</datalist>
 									</div>
 								</div>
 								<div class="col-sm-6">
@@ -657,7 +664,7 @@
 										<label for="date">Completion Date
 											<span class="required">*</span>
 										</label>
-										<input onfocus="(this.type='date')" aria-required="true" size="30" value="" name="date" id="date" class="form-control text-center" placeholder="Estimated Completion Date">
+										<input onfocus="(this.type='date')" aria-required="true" size="30" value="" name="date" id="date" class="form-control text-center" placeholder="Preferred Completion Date">
 									</div>
 								</div>
 								<div class="col-sm-6">

@@ -128,6 +128,27 @@ Border colors for elements in color section: rgba(255, 255, 255, 0.2)
 /*
 ** Bootstrap Overrides
 */
+
+
+.shingleSelectorContainer{
+	display: flex;
+	flex-direction: row;
+}
+
+.individualShingle{
+	display: flex;
+	flex-direction: column;
+	margin-right: auto;
+	margin-left: auto;
+	align-items: center;
+}
+
+.shingleImage{
+	margin-bottom: 20px;
+	height:100px;
+	width:100px;
+
+}
 /* columns with 20 and 40 percents width */
 .col-xs-20,
 .col-sm-20,
