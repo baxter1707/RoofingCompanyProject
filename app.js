@@ -18,6 +18,10 @@ app.get('/', (req,res) => {
   res.redirect('/Home')
 })
 
+app.get('www.', (req,res) => {
+  res.redirect('/Home')
+})
+
 app.get('/Home', (req,res) => {
   res.render('home')
 })
