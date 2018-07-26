@@ -95,8 +95,8 @@ app.post('/ContactForm', function (req, res) {
     port: 465,
     secure: true,
     auth: {
-      user: 'michaelbaxter1707@gmail.com',
-      pass: 'reese1707'
+      user: 'SerenityRoofingWebsite@gmail.com',
+      pass: 'Roofing!'
     }
   });
   mailOpts = {
