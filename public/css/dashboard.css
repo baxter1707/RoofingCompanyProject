@@ -1376,6 +1376,10 @@ font-weight: normal;
   /* overcome jqui theme making it bold */
 }
 
+#toTop {
+	display: none !important
+}
+
 /* TimeGrid Structure
 --------------------------------------------------------------------------------------------------*/
 .fc-time-grid-container,
@@ -2411,6 +2415,8 @@ tr.item-editable .media-left img {
   margin: 0;
   padding: 20px 30px;
 }
+
+
 
 #toTop,
 .side-chat-button,
