@@ -115,6 +115,7 @@ app.post('/ContactForm', function (req, res) {
   };
   smtpTrans.sendMail(mailOpts, function (error, response) {
     if (error) {
+      console.log(error, response)
       res.send('contact-failure');
     }
     else {
