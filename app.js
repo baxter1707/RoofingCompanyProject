@@ -96,7 +96,7 @@ app.post('/ContactForm', function (req, res) {
     secure: true,
     auth: {
       user: 'SerenityRoofingWebsite@gmail.com',
-      pass: 'Serenity2020'
+      pass: 'Serenity2020!'
     }
   });
   mailOpts = {
