@@ -91,16 +91,13 @@ app.get('/ContactUs', (req,res) => {
 app.post('/ContactForm', function (req, res) {
   let mailOpts, smtpTrans;
   smtpTrans = nodemailer.createTransport({
-    host: 'smtp.mail.yahoo.com',
+    host: 'smtp.gmail.com',
     port: 465,
-    service:'yahoo',
-    secure: false,
+    secure: true,
     auth: {
-      user: 'serenityroofingwebsite@yahoo.com',
-      pass: 'Reese1707!'
-    } ,
-    debug: false,
-    logger: true
+      user: 'SerenityRoofingWebsite@gmail.com',
+      pass: 'Serenity2020'
+    }
   });
   mailOpts = {
     from: req.body.name + ' &lt;' + req.body.email + '&gt;',
